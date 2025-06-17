@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop'; 
 
 const theme = createTheme({
   palette: {
@@ -134,7 +135,7 @@ const MainContent = styled.main`
   width: 100%;
   max-width: 100%;
   margin: 0;
-  padding-top: 72px; /* Высота AppBar + небольшой запас */
+  padding-top: 72px; /* Высота AppBar + запас */
 `;
 
 function App() {
@@ -142,6 +143,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
+        <ScrollToTop /> 
         <AppContainer>
           <Navbar />
           <MainContent>
